@@ -1,4 +1,13 @@
 const title = document.querySelector(".title");
-title.innerHTML = "hi im ahyeon";
-// console.log(title);
-title.style.color = "red"
+const CLICKED_CLASS = "clicked";
+
+function hand(){
+    title.classList.toggle(CLICKED_CLASS)
+    console.log(title.className);
+
+}
+
+function init(){
+    title.addEventListener("click",hand);
+}
+init();

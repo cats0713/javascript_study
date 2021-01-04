@@ -54,6 +54,13 @@ a{
     font-size: 24px;
     display: none;
 }
+.h{
+    
+}
+.clicked{
+    color: brown;
+}
+
 @media screen and (max-width: 786px){
     .navbar{
         flex-direction: column;
