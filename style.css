@@ -57,6 +57,14 @@ a{
 .h{
     
 }
+.from,
+.greetings{
+    display: none;
+}
+.showing{
+    display: block;
+}
+
 .clicked{
     color: brown;
 }
