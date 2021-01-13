@@ -1,7 +1,8 @@
 const form = document.querySelector(".js-greetingfrom"), //
     input = form.querySelector("input"), //form안에있는 input
     greeting = document.querySelector(".js-greetings"),
-    h4 = document.querySelector("h4");
+    h4 = document.querySelector("h4"),
+    div = document.querySelector("remeberMe");
 
 const USER_LS = "currentUser",
     SHOWING_CN = "showing";
@@ -22,17 +23,26 @@ function askName(){
     
 
 }
-function del(){
-    const delBtn = document.createElement("button");
-    delBtn.value = "x";
-    h4.createElement(delBtn);
-}
+
 
 function paintGreeting(text){
+   
+    const delBtn = document.createElement("button");
+    
+
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
     greeting.innerText = `hi ${text}`;
-    del();
+    
+    delBtn.innerText = "수정"
+    h4.appendChild(delBtn); 
+    delBtn.addEventListener("click",clickedBtn);
+
+}
+
+function clickedBtn(){
+    askName();
+    
 }
 
 function loadName(){

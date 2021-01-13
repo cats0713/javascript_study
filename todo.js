@@ -16,6 +16,11 @@ function paintToDos(text){
     li.appendChild(span);
     li.appendChild(delBtn); 
     toDoList.appendChild(li);
+    delBtn.addEventListener("click",delBtnClick)
+}
+
+function delBtnClick(){
+    
 }
 
 function hendleSubmit(){

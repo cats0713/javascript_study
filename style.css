@@ -9,6 +9,12 @@ a{
     text-decoration: none;
     color: rgb(243, 243, 243);
 }
+
+h1{
+    text-align: center;
+    
+}
+
 .navbar{
     display: flex;
     justify-content: space-between;
@@ -54,9 +60,7 @@ a{
     font-size: 24px;
     display: none;
 }
-.h{
-    
-}
+
 .from,
 .greetings{
     display: none;
