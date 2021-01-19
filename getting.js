@@ -1,8 +1,10 @@
 const form = document.querySelector(".js-greetingfrom"), //
     input = form.querySelector("input"), //form안에있는 input
-    greeting = document.querySelector(".js-greetings"),
     h4 = document.querySelector("h4"),
     div = document.querySelector("remeberMe");
+    
+const greeting = document.querySelector(".js-greetings")
+    
 
 const USER_LS = "currentUser",
     SHOWING_CN = "showing";
@@ -28,11 +30,11 @@ function askName(){
 function paintGreeting(text){
    
     const delBtn = document.createElement("button");
-    
+    delBtn.className = "editBtn";
 
     form.classList.remove(SHOWING_CN);
     greeting.classList.add(SHOWING_CN);
-    greeting.innerText = `hi ${text}`;
+    greeting.innerText = `반갑습니다 ${text}님`;
     
     delBtn.innerText = "수정"
     h4.appendChild(delBtn); 

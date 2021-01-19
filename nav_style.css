@@ -8,7 +8,7 @@
 
 nav a{
     text-decoration: none;
-    color: #32681d;
+    color: #00695c;
     font-family: godoB ;
 }
 
@@ -23,7 +23,7 @@ nav a{
     font-size: 24px;
 }
 .nav__logo i{
-    color: #32681d;
+    color: #00695c;
 }
 
 
@@ -36,15 +36,20 @@ nav a{
 .nav_menu li{
     padding: 8px 12px;
 }
-.nav_menu li:hover{
-    color: white;
-    background-color: teal;
+
+.nav_menu li a:hover{
+    color: gray;
     transition: all 1s;
 }
-/* .nav_menu li:before:hover{
-    color: #ffffff;
-    background-color: #428e92;
+
+/* .nav_menu li:nth-child(2):hover{
+    color: white;
     transition: all 1s;
+} */
+/* .nav_menu li a:nth-child(2):hover:before{
+    color: #619648;
+    transition: all 1s;
+    
 } */
 
 
