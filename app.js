@@ -5,6 +5,7 @@ const saveBtn = document.getElementById("jsSave");
 const modeBtn = document.getElementById("jsMode");
 const clearBtn = document.getElementById("jsClear");
 const sizeBar = document.getElementById("jsRange");
+const nowC = document.querySelector(".jsColor")
 const canvasSize = 400;
 
 canvas.width = canvasSize;
@@ -43,9 +44,11 @@ function stopPainting(){
 
 function handleColor(event){
     const color = event.target.style.backgroundColor;
-    event.e
     ctx.strokeStyle = color;
     ctx.fillStyle = color;
+    nowColor(event);
+    // console.log(event.path.);
+    // colors.setAttribute("style", "border: solid blue;");
     
 }
 function canvasClick(event){
@@ -68,7 +71,7 @@ if (canvas){
     canvas.addEventListener("click",canvasClick);
     canvas.addEventListener("contextmenu",clikcCM);
 }
-
+// border: solid gray;
 if (clearBtn){
     clearBtn.addEventListener("click",canverClear);
 }
@@ -109,4 +112,37 @@ function modeChange(event){
 
 Array.from(colors).forEach(color => 
     color.addEventListener("click",handleColor)
-    );
+);
+
+
+// 페인트 선택을 표시하기
+function nowColor(event){
+    const nowPaintColor = event.target.style.backgroundColor;
+    const NOWCOLOR = "nowcolor";
+    console.log(nowPaintColor);
+    console.log(nowC.classList);
+    
+    if (nowPaintColor === "rgb(44, 44, 44)"){ //검정
+        nowC.classList.add(NOWCOLOR);
+    }else if(nowPaintColor === "white"){ //하양
+        nowC.classList.add(NOWCOLOR);
+       
+    }else if(nowPaintColor === "rgb(255, 59, 48)"){ //빨강
+        nowC.classList.add(NOWCOLOR);
+        nowC.classList.remove(NOWCOLOR);
+    }else if(nowPaintColor === "rgb(255, 149, 0)"){ //주황
+        nowC.classList.add(NOWCOLOR);
+    }else if(nowPaintColor === "rgb(255, 204, 0)"){ //노랑
+        nowC.classList.add(NOWCOLOR);
+    }else if(nowPaintColor === "rgb(76, 217, 54)"){ // 초록
+        nowC.classList.add(NOWCOLOR);
+    }else if(nowPaintColor === "rgb(90, 200, 250)"){ //하늘
+        nowC.classList.add(NOWCOLOR);
+    }else if(nowPaintColor === "rgb(5, 121, 255)"){ //파랑
+        nowC.classList.add(NOWCOLOR);
+    }else if(nowPaintColor === "rgb(88, 86, 214)"){  //보라
+        nowC.classList.add(NOWCOLOR);
+    }
+    
+    
+}

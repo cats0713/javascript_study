@@ -150,3 +150,7 @@ h2{
     cursor: pointer;
 
 }
+
+.controls .nowcolor{
+    border: solid gray;;
+}
