@@ -1,9 +1,9 @@
-@import "nav_style.css";
+@import "./navbar/nav_style.css";
 /* @import "reset.css"; */
 
 @font-face{
     font-family: godoB;
-    src: url("./GodoB.otf");
+    src: url("./font/GodoB.otf");
 
 }
 
