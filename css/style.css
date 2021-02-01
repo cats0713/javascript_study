@@ -3,7 +3,7 @@
 
 @font-face{
     font-family: godoB;
-    src: url("./font/GodoB.otf");
+    src: url("../font/GodoB.otf");
 
 }
 
@@ -153,4 +153,8 @@ h2{
 
 .controls .nowcolor{
     border: solid gray;;
+}
+
+.nowColor{
+    border: solid gray;
 }
